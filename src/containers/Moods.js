@@ -15,11 +15,11 @@ export const isEducated = state => state.studies > 2;
 export const isHungry = state => state.snacks < 1;
 
 export const getFace = state => {
-  if(isTired(state) && isHungry(state)) return '😠';
-  if(isHyper(state) && isHungry(state)) return '😱';
+  if(isTired(state) && isHungry(state)) return '🤬';
+  if(isHyper(state) && isHungry(state)) return '🤮';
   if(isTired(state)) return '😴';
   if(isHyper(state)) return '🙀';
-  if(isEducated(state)) return '😲';
+  if(isEducated(state)) return '🤯';
   if(isHungry(state)) return '😡';
 
   return '😀';
@@ -48,6 +48,7 @@ export default class Moods extends Component {
         this.setState(state => ({ studies: state.studies + 1 }));
         break;
       default:
+        // eslint-disable-next-line no-console
         console.log(`unhandled name: ${name}`);
     }
   }
