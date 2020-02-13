@@ -22,10 +22,10 @@ const Moods = () => {
   });
 
   const handleSelection = name => {
-    if(name === drinkCoffee) return dispatch(drinkCoffee());
-    if(name === eatSnack) return dispatch(eatSnack());
-    if(name === takeNap) return dispatch(takeNap());
-    if(name === study) return dispatch(study());
+    if(name === 'DRINK_COFFEE') return dispatch(drinkCoffee());
+    if(name === 'EAT_SNACK') return dispatch(eatSnack());
+    if(name === 'TAKE_NAP') return dispatch(takeNap());
+    if(name === 'STUDY') return dispatch(study());
   };
 
   const getMoodActions = state => {
